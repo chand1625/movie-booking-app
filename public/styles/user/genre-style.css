@@ -1,0 +1,27 @@
+.Action {
+  color: rgb(255, 121, 11);
+}
+
+.Romance {
+  color: rgb(255, 89, 172);
+}
+
+.Comedy {
+  color: rgb(255, 230, 0);
+}
+
+.Horror {
+  color: rgb(0, 197, 82);
+}
+
+.Crime {
+  color: rgb(255, 0, 0);
+}
+
+.Drama {
+  color: rgb(109, 177, 255);
+}
+
+.Adventure {
+  color: rgb(0, 223, 223);
+}

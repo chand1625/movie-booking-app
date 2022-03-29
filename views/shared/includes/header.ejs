@@ -1,0 +1,21 @@
+<header>
+  <div><a class="app-name" href="/">Book your show</a></div>
+  <nav>
+    <ul class="userside-list">
+      <% if (locals.isAuth && !locals.isAdmin) { %>
+        <li>
+          <form class="mybookings-form" action="/user/bookings" method="GET">
+            <button class="mybookings-btn">My Bookings</button>
+          </form>
+        </li>
+      <% } %>
+      <% if (locals.isAuth) { %>
+        <li>
+          <form class="header-form" action="/logout" method="POST">
+            <button class="logout-btn">Logout</button>
+          </form>
+        </li>
+      <% } %>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,46 @@
+label {
+  display: block;
+  margin-bottom: 16px;
+}
+
+input,
+textarea {
+  font: inherit;
+  padding: 8px;
+  border-radius: var(--border-radius-small);
+  border: none;
+  width: 90%;
+  border-radius: 9px;
+}
+
+p {
+  width: 70%;
+}
+
+.form-btn {
+  margin-top: 16px;
+  width: 63%;
+  padding: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: rgb(3, 148, 22);
+  border: 2px solid #fff;
+  border-radius: 9px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.form-btn:hover,
+.form-btn:active {
+  cursor: pointer;
+  background-color: rgb(0, 83, 11);
+  color: #fff;
+}
+
+.validation-error {
+  width: 100%;
+  background-color: rgb(161, 0, 0);
+  padding: 8px 16px;
+  color: #fff;
+  font-weight: bold;
+}

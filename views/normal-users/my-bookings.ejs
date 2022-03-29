@@ -1,0 +1,47 @@
+<%- include("../shared/includes/head.ejs",{pageTitle:"My bookings"}) %>
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="stylesheet" href="/styles/user/my-bookings.css">
+  </head>
+  <body>
+    <%- include("../shared/includes/header.ejs") %>
+    <section>
+      <h1 class="username"><%= username %>'s bookings</h1>
+      <% if (bookings.length==0) { %>
+        <p class="empty-bookings-text">Currently you do not have any bookings. Book some shows and come again!</p>
+      <% } else { %>
+        <p class="cancellation-policy-text">You can not cancel your booking once there is only 1 hour left before the show starts!</p>
+        <div class="bookings-container">
+          <% for( let i = 0; i < bookings.length; i++ ) { %>
+            <div class="booking-item-container <% if (bookings[i].status=='refunded') { %>refunded-style<% } %>">
+              <div class="booking-main-details">
+                <div class="movie-theatre-names">
+                  <p class="movie-title"><%= bookings[i].movie_title  %></p>
+                  <p class="theatre-name"><%= bookings[i].theatre_name %> </p>
+                </div>
+                <div class="show-timing-details">
+                  <p class="show-date"><%= bookings[i].show_date %> </p>
+                  <p class="show-time"><%= bookings[i].show_time %> </p>
+                </div>
+                <div class="ticket-price-details">
+                  <p class="total-tickets">Tickets : <%= bookings[i].tickets %> </p>
+                  <p class="total-price"><span class="total-amount-text">Total amount :</span> <%= bookings[i].total_price %>₹</p>
+                </div>
+              </div>
+              <div class="booking-timing-details">
+                <p class="booking-date">Booked at <%= bookings[i].created_at %> </p>
+                <% if (bookings[i].status=='refunded') { %>
+                <p class="booking-refund-date">Refunded at <%= bookings[i].updated_at %> </p>
+                <% } %>
+              </div>
+              <% if (bookings[i].is_refundable) { %>
+                <form action="/cancel-booking/<%= bookings[i].id %>" method="POST">
+                  <button class="cancel-booking-btn">Cancel booking</button>
+                </form>
+              <% } %>
+            </div>
+          <% } %>
+        </div>
+      <% } %>
+    </section>
+ </body>
+</html>

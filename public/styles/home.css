@@ -1,0 +1,23 @@
+.home-btns {
+  width: 80%;
+  padding: 24px;
+  font-size: 24px;
+  font-family: inherit;
+  background-color: #fff;
+  border: 2px solid #fff;
+  border-radius: 13px;
+  text-decoration: none;
+  color: #111;
+}
+
+.home-btns:hover,
+.home-btns:active {
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+}
+
+.server-error {
+  font-size: 22px;
+  line-height: 1.5;
+}

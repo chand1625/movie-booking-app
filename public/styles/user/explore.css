@@ -1,0 +1,111 @@
+.explore-movies {
+  padding-bottom: 24px;
+  border-bottom: 2px solid #aaa;
+  font-size: 24px;
+  width: 100%;
+}
+
+.movies-section {
+  width: 100%;
+  margin-bottom: 36px;
+}
+
+.movie-na-error {
+  font-size: 28px;
+  color: #ddd;
+  letter-spacing: -0.7px;
+  padding: 24px;
+}
+
+.current-movies-heading,
+.upcoming-movies-heading {
+  text-align: left;
+  font-size: 22px;
+  padding: 12px 24px;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.current-movies-heading {
+  background-color: rgb(0, 114, 25);
+}
+
+.upcoming-movies-heading {
+  margin-top: 64px;
+  background-color: rgb(0, 75, 104);
+}
+
+.upcoming-movies-container,
+.current-movies-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 32px 0;
+}
+
+.upcoming-movie-card,
+.current-movie-card {
+  display: flex;
+  width: 60%;
+  min-height: 300px;
+  max-height: 300px;
+  background-color: #222;
+  border-radius: 15px;
+  overflow-x: clip;
+}
+
+.movie-img {
+  width: 30%;
+}
+
+.movie-details-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px;
+}
+
+.movie-title {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.movie-genre {
+  font-size: 20px;
+  margin-bottom: auto;
+}
+
+.comingon-text {
+  display: inline-block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.movie-release-date {
+  font-size: 24px;
+  text-align: left;
+}
+
+.booknow-form {
+  margin-left: auto;
+}
+
+.booknow-btn {
+  padding: 8px 16px;
+  border: 3px solid #fff;
+  border-radius: 12px;
+  background-color: #222;
+  color: #fff;
+  font-family: inherit;
+  font-size: 24px;
+}
+
+.booknow-btn:hover,
+.booknow-btn:active {
+  cursor: pointer;
+  background-color: #fff;
+  color: #222;
+}

@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #777;
+}
+
+header {
+  display: flex;
+  background-color: #222;
+  padding: 16px 36px;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+h1 {
+  color: #fff;
+}
+
+p {
+  color: #bbb;
+}
+
+section {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 36px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  width: 50%;
+  padding: 48px;
+  background-color: #333;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.app-name {
+  display: block;
+  padding: 12px 24px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+nav {
+  margin-left: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+.userside-list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.mybookings-btn,
+.logout-btn {
+  padding: 12px 24px;
+  font-family: inherit;
+  font-size: 16px;
+  border-radius: 9px;
+  letter-spacing: 0.5px;
+}
+
+.mybookings-btn {
+  border: 2px solid rgb(0, 132, 255);
+  background-color: rgb(0, 132, 255);
+  color: #fff;
+}
+
+.mybookings-btn:hover,
+.mybookings-btn:active {
+  cursor: pointer;
+  background-color: #222;
+  color: rgb(0, 132, 255);
+}
+
+.logout-btn {
+  border: 2px solid rgb(218, 63, 63);
+  background-color: rgb(218, 63, 63);
+  color: #fff;
+}
+
+.logout-btn:hover,
+.logout-btn:active {
+  cursor: pointer;
+  background-color: #222;
+  color: rgb(218, 63, 63);
+}

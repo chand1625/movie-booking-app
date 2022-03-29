@@ -1,0 +1,148 @@
+section {
+  gap: 12px;
+}
+
+.username {
+  font-size: 28px;
+}
+
+.cancellation-policy-text,
+.empty-bookings-text {
+  font-size: 22px;
+  margin-bottom: 32px;
+}
+
+.bookings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.booking-item-container {
+  width: 80%;
+  padding: 16px 32px;
+  background-color: #333;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.booking-main-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0 24px 0;
+  border-bottom: 2px solid #aaa;
+}
+
+.movie-theatre-names {
+  text-align: left;
+  width: 40%;
+}
+
+.movie-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.theatre-name {
+  letter-spacing: 0.5px;
+  color: rgba(255, 196, 0, 0.883);
+}
+
+.show-timing-details {
+  text-align: left;
+  width: 30%;
+  padding-left: 48px;
+}
+
+.show-date {
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: 0.3px;
+  margin-bottom: 8px;
+}
+
+.show-time {
+  text-align: center;
+  width: 60%;
+  padding: 8px 12px;
+  font-size: 22px;
+  border: 3px solid rgba(0, 205, 224, 0.85);
+  color: rgb(0, 206, 224, 0.85);
+  font-weight: bold;
+  border-radius: 9px;
+}
+
+.ticket-price-details {
+  text-align: right;
+  width: 30%;
+}
+
+.total-tickets {
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.total-price {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+.total-amount-text {
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.booking-timing-details {
+  padding: 8px 0;
+}
+
+.booking-date {
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.cancel-booking-btn {
+  width: 50%;
+  padding: 12px 0;
+  background-color: rgba(224, 0, 49, 0.75);
+  border: 2.5px solid #fff;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 11px;
+  font-family: inherit;
+}
+
+.cancel-booking-btn:hover,
+.cancel-booking-btn:active {
+  background-color: rgba(134, 0, 29, 0.75);
+}
+
+.refunded-style::after {
+  content: "Refunded";
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  padding: 6px 64px;
+  position: absolute;
+  top: 75%;
+  right: -3%;
+  transform: rotate(-30deg);
+  background-color: rgba(224, 0, 49, 0.75);
+}

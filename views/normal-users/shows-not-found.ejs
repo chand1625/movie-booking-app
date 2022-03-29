@@ -1,0 +1,11 @@
+<%- include("../shared/includes/head.ejs",{pageTitle:"No shows for "+movieTitle}) %>
+<link rel="stylesheet" href="/styles/home.css">
+  </head>
+  <body>
+    <%- include("../shared/includes/header.ejs") %>
+    <section>
+      <h1>Shows not found!</h1>
+      <p class="server-error">Unfortunately there are no shows found for <%= movieTitle %> . Please search shows for other movies.</p>
+    </section>
+  </body> 
+</html>

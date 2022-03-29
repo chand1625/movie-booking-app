@@ -1,0 +1,11 @@
+<%- include("includes/head.ejs",{pageTitle:titleOfPage}) %>
+<link rel="stylesheet" href="/styles/home.css">
+  </head>
+  <body>
+    <%- include("includes/header.ejs") %>
+    <section>
+      <h1><%= errorTitle %> </h1>
+      <p class="server-error"><%- errorDescription %> </p>
+    </section>
+  </body> 
+</html>

@@ -1,0 +1,82 @@
+<%- include("../shared/includes/head.ejs",{pageTitle:movie.title+" | Shows"}) %>
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="stylesheet" href="/styles/user/show-details.css">
+<link rel="stylesheet" href="/styles/user/genre-style.css">
+<script type="module" defer src="/js/bookshow.popup.js"></script>
+  </head>
+  <body>
+    <%- include("../shared/includes/header.ejs") %>
+    <div class="show-movie-name <%= movie.genre %>">
+      <p class="movie-title-text"><%= movie.title %></p>
+      <span class="movie-genre-text <%= movie.genre %>"><%= movie.genre %></span>
+      <span class="movie-releasedate-text">Released on <%= movie.release_date %></span>
+   </div>
+    <section data-movie="<%= movie.title %>">
+       <div class="shows-container">
+          <% for( let i = 0; i < shows.length; i++ ) { %>
+            <div class="show-by-date">
+               <div class="show-date-container">
+                  <p><%= shows[i][0][0][0].show_date_display %> </p>
+               </div>
+               <div class="main-show-content">
+                  <% for( let j = 0; j < shows[i].length; j++ ) { %>
+                     <div class="show-by-city">
+                        <div class="show-city-container">
+                           <p class="city-name-text"><%= shows[i][j][0][0].city %> </p>
+                           <div class="show-theatre-container">
+                              <% for( let k = 0; k < shows[i][j].length; k++ ) { %>
+                                 <div class="show-theatre-item">
+                                    <p class="theatre-name-text"><%= shows[i][j][k][0].theatre_name %> </p>
+                                    <p class="theatre-address-text"><%= shows[i][j][k][0].address %></p>
+                                    <div class="show-timing-container">
+                                       <% for( let l = 0; l < shows[i][j][k].length; l++ ) { %>
+                                          <button class="show-timing-item <%= shows[i][j][k][l].show_cap_style %>" data-id="<%= shows[i][j][k][l].show_id %>" data-showDate="<%= shows[i][j][k][l].show_date_display %>" data-showPrice="<%= shows[i][j][k][l].price %>" data-showTime="<%= shows[i][j][k][l].show_time_display %>" data-theatreName="<%= shows[i][j][k][l].theatre_name %>"><%= shows[i][j][k][l].show_time_display %></button>
+                                       <% } %>
+                                    </div>
+                                 </div>
+                                 <% if (k<shows[i][j].length-1) { %>
+                                  <div class="theatre-breaker-border"> </div>
+                                 <% } %>
+                              <% } %>
+                           </div>
+                        </div>
+                     </div>
+                  <% } %>
+               </div>
+            </div>
+          <% } %>
+       </div>
+    </section>
+    <div class="book-show-popup">
+       <div class="popup-movie-title"></div>
+       <div class="popup-theatre-name"></div>
+       <div class="show-timing"></div>
+       <div class="popup-other-details-outer">
+          <div class="popup-other-details">
+             <div class="price-box">
+                <span class="price-text">Price</span>
+                <span class="price-value"></span>
+               </div>
+               <div class="ticket-box">
+                  <span class="ticket-text">Tickets</span>
+                  <div class="ticket-btns-container">
+                     <button class="minus-btn">&minus;</button>
+                     <span class="ticket-value">1</span>
+                     <button class="plus-btn">&plus;</button>
+                  </div>
+               </div>
+               <div class="total-price-val"></div>
+            </div>
+         </div>
+       <div class="popup-btns">
+          <button class="popup-book-btn">Book</button>
+          <button class="popup-cancel-btn">Cancel</button>
+       </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="error-popup">
+       <p class="error-popup-message"></p>
+       <button class="error-popup-okay-btn">Okay</button>
+    </div>
+ </body>
+</html>

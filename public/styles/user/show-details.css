@@ -1,0 +1,389 @@
+body {
+  background-color: #777;
+}
+
+header {
+  margin: 0;
+  border-bottom: 5px solid #fff;
+}
+
+.show-movie-name {
+  width: 100%;
+  padding: 24px 60px;
+  background-color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+.movie-title-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.movie-genre-text {
+  padding: 6px 12px;
+  border: 2px solid;
+  background-color: #000;
+  border-radius: 11px;
+  opacity: 0.8;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.movie-releasedate-text {
+  display: inline-block;
+  color: #aaa;
+  letter-spacing: 0.4px;
+}
+
+section {
+  margin: 0;
+  width: 100%;
+}
+
+.shows-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.show-by-date {
+  width: 100%;
+}
+
+.show-date-container {
+  text-align: left;
+  font-size: 20px;
+  background-color: #fff;
+  padding: 16px 60px;
+}
+
+.show-date-container p {
+  color: #222;
+  font-weight: 600;
+}
+
+.main-show-content {
+  padding: 32px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.show-by-city {
+  text-align: left;
+}
+
+.city-name-text {
+  text-align: center;
+  width: 15%;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  background-color: #555;
+  padding: 8px 16px;
+  border: 2px solid #fff;
+  border-radius: 11px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.show-theatre-container {
+  padding: 20px 32px;
+  background-color: #333;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.theatre-breaker-border {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.287);
+}
+
+.show-theatre-item {
+  padding-top: 8px;
+}
+
+.theatre-name-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.theatre-address-text {
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.show-timing-container {
+  padding: 16px 0;
+  display: flex;
+  gap: 20px;
+}
+
+.show-timing-item {
+  padding: 8px 16px;
+  border-radius: 9px;
+  font-family: inherit;
+  background-color: #333;
+  font-size: 18px;
+}
+
+.show-available {
+  border: 2px solid rgb(46, 231, 0);
+  color: rgb(46, 231, 0);
+}
+.show-filling-fast {
+  border: 2px solid rgb(255, 175, 3);
+  color: rgb(255, 174, 0);
+}
+.show-almost-full {
+  border: 2px solid rgb(255, 69, 69);
+  color: rgb(255, 69, 69);
+}
+
+.show-timing-item:hover,
+.show-timing-item:active {
+  background-color: #000;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.overlay-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.book-show-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 13px;
+  padding: 32px;
+  width: 500px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.popup-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-movie-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.popup-theatre-name {
+  margin-bottom: 2px;
+  font-weight: 500;
+  color: rgb(209, 84, 0);
+}
+
+.show-timing {
+  padding: 0 0 12px 0;
+  font-size: 22px;
+  border-bottom: 2px solid #222;
+  font-weight: 500;
+}
+
+.popup-other-details-outer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.popup-other-details {
+  text-align: right;
+  padding: 12px 0;
+  display: inline-block;
+  margin-left: auto;
+}
+
+.price-text,
+.ticket-text {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.price-value {
+  font-size: 24px;
+  margin-left: 48px;
+  font-weight: 500;
+}
+
+.price-box {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.minus-btn,
+.plus-btn {
+  padding: 2px 6px;
+  text-decoration: none;
+  font-family: inherit;
+  background-color: #fff;
+  border: 2px solid #222;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.plus-btn:hover,
+.plus-btn:active,
+.minus-btn:hover,
+.minus-btn:active {
+  background-color: #222;
+  color: #fff;
+}
+
+.minus-btn {
+  margin-left: 12px;
+}
+
+.ticket-value {
+  margin: 0 16px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.ticket-btns-container {
+  display: inline-flex;
+  align-items: center;
+}
+
+.ticket-box {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #222;
+}
+
+.total-price-val {
+  padding: 8px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(0, 40, 221);
+}
+
+.popup-btns {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.popup-cancel-btn,
+.popup-book-btn {
+  padding: 8px 0;
+  font-family: inherit;
+  font-size: 22px;
+  border: none;
+  border-radius: 11px;
+  color: #fff;
+}
+
+.popup-cancel-btn {
+  background-color: rgb(211, 1, 1);
+}
+
+.popup-book-btn {
+  background-color: rgb(0, 168, 0);
+}
+
+.popup-cancel-btn:hover,
+.popup-cancel-btn:active {
+  background-color: rgb(156, 0, 0);
+}
+
+.popup-book-btn:hover,
+.popup-book-btn:active {
+  background-color: rgb(0, 114, 0);
+}
+
+.error-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 13px;
+  padding: 32px;
+  width: 500px;
+  pointer-events: none;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.error-popup-message {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error-response-message {
+  color: rgb(206, 0, 0);
+}
+
+.success-response-message {
+  color: rgb(0, 168, 0);
+}
+
+.error-popup-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.error-popup-okay-btn {
+  padding: 8px 0;
+  font-family: inherit;
+  font-size: 22px;
+  border: none;
+  border-radius: 11px;
+  color: #fff;
+}
+
+.error-response {
+  background-color: rgb(206, 0, 0);
+}
+
+.error-response:hover,
+.error-response:hover {
+  background-color: rgb(119, 0, 0);
+}
+
+.success-response {
+  background-color: rgb(0, 168, 0);
+}
+
+.success-response:hover,
+.success-response:hover {
+  background-color: rgb(0, 104, 0);
+}

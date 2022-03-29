@@ -1,0 +1,84 @@
+<%- include("../shared/includes/head.ejs",{pageTitle:"Explore"}) %>
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="stylesheet" href="/styles/user/explore.css">
+<link rel="stylesheet" href="/styles/user/genre-style.css">
+  </head>
+  <body>
+    <%- include("../shared/includes/header.ejs") %>
+    <section>
+       <h1 class="explore-movies">Explore movies</h1>
+       <% if (!current_movies && !upcoming_movies) { %>
+       <p class="movie-na-error">Currently there are no movies released or scheduled for a release.<br> Please visit after some days!</p>
+       <% } else if (!current_movies) { %>
+       <div class="movies-section">
+          <h2 class="current-movies-heading">Current movies</h2>
+          <p class="movie-na-error">Currently there are no movies released.<br> You can check upcoming movies below!</p>
+          <h2 class="upcoming-movies-heading">Upcoming movies</h2>
+          <div class="upcoming-movies-container">
+             <% for( const movie of upcoming_movies ) { %>
+             <div class="upcoming-movie-card">
+                <img class="movie-img" src="<%= movie.image %> " alt="<%= movie.title + "poster"%>">
+                <div class="movie-details-container">
+                   <h3 class="movie-title"><%= movie.title %> </h3>
+                   <p class="movie-genre <%= movie.genre %>"><%= movie.genre %> </p>
+                   <p class="movie-release-date"><%= movie.release_date %> </p>
+                </div>
+             </div>
+             <% } %>
+          </div>
+       </div>
+       <% } else if (!upcoming_movies) { %>
+       <div class="movies-section">
+          <h2 class="current-movies-heading">Current movies</h2>
+          <div class="current-movies-container">
+             <% for( const movie of current_movies ) { %>
+             <div class="current-movie-card">
+                <img class="movie-img" src="<%= movie.image %> " alt="<%= movie.title + "poster"%>">
+                <div class="movie-details-container">
+                   <h3 class="movie-title"><%= movie.title %> </h3>
+                   <p class="movie-genre <%= movie.genre %>"><%= movie.genre %> </p>
+                   <form action="/<%= movie.id %>/movie-details" method="GET" class="booknow-form">
+                      <button class="booknow-btn">Book now</button>
+                   </form>
+                </div>
+             </div>
+             <% } %>
+          </div>
+          <h2 class="upcoming-movies-heading">Upcoming movies</h2>
+          <p class="movie-na-error">Currently there are no upcoming movies.<br> You can check released movies above!</p>
+       </div>
+       <% } else { %>
+       <div class="movies-section">
+          <h2 class="current-movies-heading">Current movies</h2>
+          <div class="current-movies-container">
+             <% for( const movie of current_movies ) { %>
+             <div class="current-movie-card">
+                <img class="movie-img" src="<%= movie.image %> " alt="<%= movie.title + "poster"%>">
+                <div class="movie-details-container">
+                   <h3 class="movie-title"><%= movie.title %> </h3>
+                   <p class="movie-genre <%= movie.genre %>"><%= movie.genre %> </p>
+                   <form action="/<%= movie.id %>/movie-details" method="GET" class="booknow-form">
+                    <button class="booknow-btn">Book now</button>
+                   </form>
+                </div>
+             </div>
+             <% } %>
+          </div>
+          <h2 class="upcoming-movies-heading">Upcoming movies</h2>
+          <div class="upcoming-movies-container">
+             <% for( const movie of upcoming_movies ) { %>
+             <div class="upcoming-movie-card">
+                <img class="movie-img" src="<%= movie.image %> " alt="<%= movie.title + "poster"%>">
+                <div class="movie-details-container">
+                   <h3 class="movie-title"><%= movie.title %> </h3>
+                   <p class="movie-genre <%= movie.genre %>"><%= movie.genre %> </p>
+                   <p class="movie-release-date"><span class="comingon-text">Coming on</span><br><%= movie.release_date %> </p>
+                </div>
+             </div>
+             <% } %>
+          </div>
+       </div>
+       <% } %>
+    </section>
+ </body>
+</html>

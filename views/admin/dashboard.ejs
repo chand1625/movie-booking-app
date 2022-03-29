@@ -1,0 +1,22 @@
+<%- include("../shared/includes/head.ejs",{pageTitle:"Admin Dashboard"}) %>
+<link rel="stylesheet" href="/styles/admin/dashboard.css">
+<script type="module" defer src="/js/index.js"></script>
+  </head>
+  <body>
+    <%- include("../shared/includes/header.ejs") %>
+    <section class="admin-dashboard">
+      <nav class="menu">
+        <ul>
+          <li class="menu-list-item"><button class="menu-btns menu-btn-movies">Movies</button></li>
+          <li class="menu-list-item"><button class="menu-btns menu-btn-theatres">Theatres</button></li>
+          <li class="menu-list-item"><button class="menu-btns menu-btn-shows">Shows</button></li>
+        </ul>
+      </nav>
+      <main class="content">
+        <div class="msg-container">
+          <h1>Welcome Admin!</h1>
+        </div>
+      </main>
+    </section>
+  </body> 
+</html>
