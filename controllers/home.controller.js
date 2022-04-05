@@ -13,7 +13,7 @@ function getHome(req, res) {
 }
 
 function getDashboard(req, res) {
-  res.render("./admin/dashboard");
+  res.render("./admin/dashboard.ejs");
 }
 
 module.exports = {
