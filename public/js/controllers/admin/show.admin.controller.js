@@ -1,10 +1,10 @@
-import * as showModel from "../../models/admin/F.show.admin.model.js";
-import { loadAllMovies } from "../../models/admin/F.movie.admin.model.js";
-import { loadAllTheatres } from "../../models/admin/F.theatre.admin.model.js";
-import showAdminView from "../../views/admin/shows/F.show.admin.view.js";
-import addshowAdminView from "../../views/admin/shows/F.addshow.admin.view.js";
-import errorAdminView from "../../views/admin/F.error.admin.view.js";
-import showcardAdminView from "../../views/admin/shows/F.showcard.admin.view.js";
+import * as showModel from "../../models/admin/show.admin.model.js";
+import { loadAllMovies } from "../../models/admin/movie.admin.model.js";
+import { loadAllTheatres } from "../../models/admin/theatre.admin.model.js";
+import showAdminView from "../../views/admin/shows/show.admin.view.js";
+import addshowAdminView from "../../views/admin/shows/addshow.admin.view.js";
+import errorAdminView from "../../views/admin/error.admin.view.js";
+import showcardAdminView from "../../views/admin/shows/showcard.admin.view.js";
 
 let main_data;
 

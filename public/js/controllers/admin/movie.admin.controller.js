@@ -1,8 +1,8 @@
-import * as movieModel from "../../models/admin/F.movie.admin.model.js";
-import movieAdminView from "../../views/admin/movies/F.movie.admin.view.js";
-import addmovieAdminView from "../../views/admin/movies/F.addmovie.admin.view.js";
-import errorAdminView from "../../views/admin/F.error.admin.view.js";
-import moviecardAdminView from "../../views/admin/movies/F.moviecard.admin.view.js";
+import * as movieModel from "../../models/admin/movie.admin.model.js";
+import movieAdminView from "../../views/admin/movies/movie.admin.view.js";
+import addmovieAdminView from "../../views/admin/movies/addmovie.admin.view.js";
+import errorAdminView from "../../views/admin/error.admin.view.js";
+import moviecardAdminView from "../../views/admin/movies/moviecard.admin.view.js";
 
 async function deleteMovie(e) {
   const movieid = e.target.parentElement.dataset.id;

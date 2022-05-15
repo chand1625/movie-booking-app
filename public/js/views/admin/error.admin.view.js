@@ -1,4 +1,4 @@
-import adminMenuView from "./F.admin.menu.view.js";
+import adminMenuView from "./admin.menu.view.js";
 
 class errorAdminView extends adminMenuView {
   btn = document.querySelector(".content");

@@ -1,8 +1,8 @@
-import * as theatreModel from "../../models/admin/F.theatre.admin.model.js";
-import theatreAdminView from "../../views/admin/theatres/F.theatre.admin.view.js";
-import addtheatreAdminView from "../../views/admin/theatres/F.addtheatre.admin.view.js";
-import errorAdminView from "../../views/admin/F.error.admin.view.js";
-import theatrecardAdminView from "../../views/admin/theatres/F.theatrecard.admin.view.js";
+import * as theatreModel from "../../models/admin/theatre.admin.model.js";
+import theatreAdminView from "../../views/admin/theatres/theatre.admin.view.js";
+import addtheatreAdminView from "../../views/admin/theatres/addtheatre.admin.view.js";
+import errorAdminView from "../../views/admin/error.admin.view.js";
+import theatrecardAdminView from "../../views/admin/theatres/theatrecard.admin.view.js";
 
 async function deleteTheatre(e) {
   const theatreid = e.target.parentElement.dataset.id;

@@ -1,4 +1,4 @@
-import adminMenuView from "../F.admin.menu.view.js";
+import adminMenuView from "../admin.menu.view.js";
 
 class showAdminView extends adminMenuView {
   btn = document.querySelector(".menu-btn-shows");
